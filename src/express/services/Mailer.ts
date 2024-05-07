@@ -26,11 +26,11 @@ export class MailService {
         subject: 'OTP code',
         text: '',
         html: `
-                  <div> 
-                    <h1>Your OTP code</h1>
-                    <p>${otpCode}</p> 
-                  </div>      
-                `,
+          <div> 
+            <h1>Your OTP code</h1>
+            <p>${otpCode}</p> 
+          </div>      
+        `,
       });
     } catch (error) {
       return error;
