@@ -28,7 +28,7 @@ export class MailService {
         html: `
           <div> 
             <h1>Your OTP code</h1>
-            <p>${otpCode}</p> 
+            <h3>${otpCode}</h3> 
           </div>      
         `,
       });
