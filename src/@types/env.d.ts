@@ -13,5 +13,7 @@ declare namespace NodeJS {
     SMPT_PORT: string;
     SMPT_USER: string;
     SMPT_PASSWORD: string;
+    AWS_ACCESS_KEY_ID: string;
+    AWS_SECRET_ACCESS_KEY: string;
   }
 }
