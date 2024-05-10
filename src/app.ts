@@ -2,8 +2,8 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express, { Application, NextFunction, Request, Response } from 'express';
 
-import { errorResponse } from './express/api/baseResponses';
-import { Controller } from './express/controllers/Controller';
+import { errorResponse } from './api/baseResponses';
+import { Controller } from './controllers/Controller';
 
 export class App {
   public readonly app: Application;
@@ -42,7 +42,9 @@ export class App {
 
   private initializeBaseError = () => {
     this.app.use((_req: Request, res: Response) => {
-      return res.status(404).json(errorResponse(404, 'The requested API route could not be found.'));
+      return res
+        .status(404)
+        .json(errorResponse(404, 'The requested API route could not be found.'));
     });
     this.app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
       if (err instanceof SyntaxError && 'status' in err && err.status === 400 && 'body' in err) {

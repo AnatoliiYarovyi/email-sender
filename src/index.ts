@@ -1,10 +1,10 @@
 import 'dotenv/config';
 
 // services
-import { MailService } from './express/services/Mailer';
+import { MailService } from './services/Mailer';
 
 // controllers
-import { MailerController } from './express/controllers/Mailer';
+import { MailerController } from './controllers/Mailer';
 
 // others
 import { App } from './app';
